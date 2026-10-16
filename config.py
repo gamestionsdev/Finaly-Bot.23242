@@ -5,7 +5,8 @@ from pathlib import Path
 
 
 BASE_DIR = Path(__file__).resolve().parent
-BANNER_PATH = BASE_DIR / "banner.png"
+ASSETS_DIR = BASE_DIR / "assets"
+BANNER_PATH = ASSETS_DIR / "banner.png"
 DATA_DIR = Path(os.getenv("DATA_DIR", BASE_DIR / "data"))
 DATABASE_PATH = Path(os.getenv("TASK_BOT_DATABASE", DATA_DIR / "tasks.sqlite3"))
 
@@ -37,6 +38,8 @@ SPECIALIST_ROLES = (
     1549023180515971133,
     1549084093864484994,
     1553823964680290305,
+    1549024587550040175,
+    1558139368432996422,
 )
 
 ROLE_NAMES = {
@@ -54,6 +57,8 @@ ROLE_NAMES = {
     1549023180515971133: "UI-дизайнер",
     1549084093864484994: "SFX-продюсер",
     1553823964680290305: "Младший дизайнер",
+    1549024587550040175: "Аниматор",
+    1558139368432996422: "Младший аниматор",
 }
 
 TASK_ROLE_IDS = tuple(ROLE_NAMES)
